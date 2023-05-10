@@ -2,14 +2,25 @@
 //=============================================================================================>
 
 document.addEventListener('DOMContentLoaded', () => {
-    let currentId = 1;
-    let cartValue = 0;
-    let itemPrice = 0;
-    let cartPrice = 0;
-    let allData = [];
 
-    cartButton();
-    
+    initalize()
+    // let currentId = 1;
+    // let cartValue = 0;
+    // let itemPrice = 0;
+    // let cartPrice = 0;
+    // let allData = [];
+    // cartButton();
+    //why does this work? scope? 
+
+    function initalize() {
+        let currentId = 1;
+        let cartValue = 0;
+        let itemPrice = 0;
+        let cartPrice = 0;
+        let allData = [];
+        cartButton();
+    };
+
     // Basic Get request (Read)
     fetch('http://localhost:3000/menu')
         .then((r) => r.json())
@@ -135,3 +146,5 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 //=============================================================================================>
+//...Ok
+
